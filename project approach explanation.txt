@@ -1,0 +1,10 @@
+Controller / CustomTasksController: I created a single controller to handle all the routes in my API. This controller serves as the entry point for handling incoming HTTP requests. It has actions for CRUD operations (Create, Read, Update, Delete) that interact with the service layer, ensuring the application follows a clean separation of concerns. By keeping the controller focused on request handling, I ensured that business logic was abstracted into services for better maintainability.
+
+Models / CustomTask: I defined a model that represents the structure of the tasks in the database. This model is a simple C# class with properties that correspond to the fields in the database table.
+
+Context / CustomTaskDbContext: To manage the interaction between the application and the database, I set up a DbContext class. The DbContext is responsible for configuring and initializing the connection to the database. I used Entity Framework Core to set up the necessary configurations for database tables, relationships, and queries. The DbContext makes it easy to interact with the database using LINQ queries and ensures that the application follows the standard practices for database communication in .NET Core.
+
+Services / CustomTaskStatusUpdateService: I implemented a service layer that runs a background task once every day to update records in the database. This service interacts with the DbContext to query the database, perform necessary updates, and save the changes back to the database. I leveraged a background service to automate this task, ensuring that it runs on a scheduled basis without manual intervention. This approach allows me to easily extend or modify the update logic in the future without affecting the other parts of the application.
+
+for the frontend side I used MUI components library.
+

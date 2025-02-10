@@ -1,0 +1,10 @@
+This is my Task Management System.
+in the project there are two folders, tasks-api and tasks-app. The tasks-api consists a tasks-api folder and tasks-api.sln. the first is the actual api repo, and the tasks-api.sln is for development in visual studio.
+To run the backend you should navigate ( in terminal ) to the inner tasks-api folder, and run  dotnet run
+then the backend will run on port 5001.
+make sure you have node and npm installed: node -v    npm -v
+to run the frontend, navigate to the tasks-app folder, and run:
+npm install
+to install all the dependencies, then run:
+npm start
+to run the app locally. it will run on: http://localhost:3000/
